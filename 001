@@ -1,0 +1,6 @@
+#这是一个测试文件
+while True:
+     try:
+     priint("hello")
+     except:
+        break.
