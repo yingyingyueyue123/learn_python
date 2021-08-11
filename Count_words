@@ -1,0 +1,14 @@
+# 统计一个文件或一个字符串中所有单词出现的次数。
+str="Try to run this command from the system terminal. Make sure that you use the correct version of 'pip' installed for your Python interpreter located at 'D:/yueyue/pythontest/venv/Scripts/python.exe'."
+# 思路1：先把句子中的标点符号统一替换为空格，然后在split()切割即可搞定
+import string
+for i in str:
+    if i in string.punctuation:
+        str=str.replace(i,"")
+
+print(str.split())
+
+#思路2：正则表达式
+import re
+
+print(re.findall(r'\b\w+\b', str))
